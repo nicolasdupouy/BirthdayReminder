@@ -5,7 +5,7 @@ import com.example.birthdayreminder.R;
 import android.os.Bundle;
 import android.app.Activity;
 
-public class MainActivity extends Activity {
+public class BirthdayReminderMainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
