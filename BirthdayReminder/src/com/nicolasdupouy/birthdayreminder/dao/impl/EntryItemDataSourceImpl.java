@@ -9,16 +9,13 @@ import com.nicolasdupouy.birthdayreminder.data.EntryItem;
 
 public class EntryItemDataSourceImpl implements EntryItemDataSource {
 
-	/* ################
-	 * ## TEMPORAIRE ##
-	 * ################
-	 */
 	private static final List<EntryItem> defaultEntryList = new ArrayList<EntryItem>();
 	static {
-		defaultEntryList.add(new EntryItem("Bob", "Bob le premier", new Date(), true));
-		defaultEntryList.add(new EntryItem("Martin", "Martin le second", new Date(), true));
+		defaultEntryList.add(new EntryItem("Hanounti", "Dupouy", new Date(), "0622002583", "hanane.moualil@gmail.com", true));
+		defaultEntryList.add(new EntryItem("Nicolas", "Dupouy", new Date(), "0682717585", "nicolasdupouy@gmail.com", true));
+		defaultEntryList.add(new EntryItem("Pierre-Amédée", "Dupouy", new Date(), "0682717585", "nicolasdupouy@gmail.com", true));
+		defaultEntryList.add(new EntryItem("Jean-Mohamed", "Dupouy", new Date(), "0682717585", "nicolasdupouy@gmail.com", true));
 	}
-	/* ################ */
 	
 	
 	@Override
