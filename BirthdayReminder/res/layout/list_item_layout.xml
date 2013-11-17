@@ -1,30 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout 
+<RelativeLayout 
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal" >
+    android:paddingLeft="10dip"
+	android:paddingRight="10dip" >
 
-	<ImageView
+	<ImageButton
 	    android:id="@+id/photo"
+	    android:src="@drawable/ic_launcher"
 	    android:contentDescription="@string/photoDescription"
+	    
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
-	    android:src="@drawable/ic_launcher" />
+	    android:layout_alignParentTop="true"
+	    android:layout_alignParentLeft="true"
+	     />
 
 	<TextView
 	    android:id="@+id/fullname"
+	    
+	    android:padding="5dp"
+		android:singleLine="true"
+		android:textSize="12sp"
+		android:ellipsize="end"
+		
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
 		android:gravity="center_vertical"
-		android:padding="5dp"
-		android:singleLine="true"
-		android:textSize="20sp"
-		android:ellipsize="end"
-		android:drawableRight="@drawable/ic_file_edit" />
+		android:layout_toRightOf="@id/photo" />
 	
 	<TextView
 	    android:id="@+id/birthdayDate"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    
+	    android:textSize="12sp"
+	    
+	    android:layout_below="@id/fullname"
+	    android:layout_toRightOf="@id/photo" />
+	
+	
+	<LinearLayout 
 	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content" />
-</LinearLayout>
+	    android:layout_height="wrap_content"
+	   	
+	    android:layout_toRightOf="@id/fullname"
+	    android:layout_alignParentRight="true"
+	    android:layout_centerVertical="true"
+	    android:orientation="horizontal"
+	    android:gravity="right">
+	    
+	    <!--   -->
+		<ImageButton 
+			    android:id="@+id/phoneButton"
+			    android:src="@drawable/ic_phone_70x70"
+			    android:contentDescription="@string/phoneDescription"
+			   	style="@style/translucide"
+			   	
+			    android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content" />
+		
+		<!--  style="@style/translucide" -->
+		<ImageButton 
+			    android:id="@+id/messageButton"
+			    android:src="@drawable/ic_mail_70x70"
+			    android:contentDescription="@string/messageDescription"
+			    style="@style/translucide"
+			    
+			    android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:paddingLeft="5dip"
+		    	android:layout_toRightOf="@id/phoneButton" />
+	</LinearLayout>
+	
+</RelativeLayout>

@@ -4,6 +4,10 @@
     <string name="app_name">BirthdayReminder</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-    <string name="photoDescription">photo</string>
+    <string name="photoDescription">Photo</string>
+    <string name="phoneDescription">Call</string>
+    <string name="messageDescription">Send Message</string>
+    
+    <string name="divider">Divider</string>
 
 </resources>
