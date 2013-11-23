@@ -8,7 +8,7 @@
 
 	<ImageButton
 	    android:id="@+id/photo"
-	    android:src="@drawable/ic_launcher"
+	    android:src="@drawable/ic_layout_default_photo"
 	    android:contentDescription="@string/photoDescription"
 	    
 	    android:layout_width="wrap_content"
@@ -54,7 +54,7 @@
 	    <!--   -->
 		<ImageButton 
 			    android:id="@+id/phoneButton"
-			    android:src="@drawable/ic_phone_70x70"
+			    android:src="@drawable/ic_layout_phone_70x70"
 			    android:contentDescription="@string/phoneDescription"
 			   	style="@style/translucide"
 			   	
@@ -64,7 +64,7 @@
 		<!--  style="@style/translucide" -->
 		<ImageButton 
 			    android:id="@+id/messageButton"
-			    android:src="@drawable/ic_mail_70x70"
+			    android:src="@drawable/ic_layout_mail_70x70"
 			    android:contentDescription="@string/messageDescription"
 			    style="@style/translucide"
 			    
