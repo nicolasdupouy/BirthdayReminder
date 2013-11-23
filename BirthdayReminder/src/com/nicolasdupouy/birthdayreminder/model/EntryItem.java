@@ -1,6 +1,9 @@
-package com.nicolasdupouy.birthdayreminder.data;
+package com.nicolasdupouy.birthdayreminder.model;
 
 import java.util.Date;
+
+import android.content.Context;
+import android.widget.Toast;
 
 public class EntryItem {
 
@@ -34,6 +37,24 @@ public class EntryItem {
 	public Date getBirthdayDate() {
 		return birthdayDate;
 	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	@Override
+	public String toString() {
+		/*return "EntryItem [firstName=" + firstName + ", lastName=" + lastName
+				+ ", birthdayDate=" + birthdayDate + ", phoneNumber="
+				+ phoneNumber + ", email=" + email + ", activated=" + activated
+				+ "]";*/
+		return firstName + " " + lastName;
+	}
+	
 	
 	//private EntryItem() {}
 	

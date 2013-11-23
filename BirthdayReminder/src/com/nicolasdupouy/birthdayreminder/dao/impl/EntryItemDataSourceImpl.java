@@ -4,8 +4,11 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import android.widget.Toast;
+
+import com.nicolasdupouy.birthdayreminder.activity.BirthdayReminderMainActivity;
 import com.nicolasdupouy.birthdayreminder.dao.EntryItemDataSource;
-import com.nicolasdupouy.birthdayreminder.data.EntryItem;
+import com.nicolasdupouy.birthdayreminder.model.EntryItem;
 
 public class EntryItemDataSourceImpl implements EntryItemDataSource {
 
@@ -13,8 +16,9 @@ public class EntryItemDataSourceImpl implements EntryItemDataSource {
 	static {
 		defaultEntryList.add(new EntryItem("Hanounti", "Dupouy", new Date(), "0622002583", "hanane.moualil@gmail.com", true));
 		defaultEntryList.add(new EntryItem("Nicolas", "Dupouy", new Date(), "0682717585", "nicolasdupouy@gmail.com", true));
-		defaultEntryList.add(new EntryItem("Pierre-Amédée", "Dupouy", new Date(), "0682717585", "nicolasdupouy@gmail.com", true));
-		defaultEntryList.add(new EntryItem("Jean-Mohamed", "Dupouy", new Date(), "0682717585", "nicolasdupouy@gmail.com", true));
+		defaultEntryList.add(new EntryItem("Jacques-Abdel", "Dupouy", new Date(), null, null, true));
+		defaultEntryList.add(new EntryItem("Jean-Mohamed", "Dupouy", new Date(), null, null, true));
+		defaultEntryList.add(new EntryItem("Marie-Fatima", "Dupouy", new Date(), null, null, true));
 	}
 	
 	
@@ -23,7 +27,9 @@ public class EntryItemDataSourceImpl implements EntryItemDataSource {
 		return defaultEntryList;
 	}
 	@Override
-	public boolean update(EntryItem entryItem) {
+	public boolean add(EntryItem entryItem) {
+		/*Toast.makeText(BirthdayReminderMainActivity.this, "Vous voulez ajouter une entrée !", Toast.LENGTH_SHORT)
+		 .show();*/
 		return false;
 	}
 	@Override
