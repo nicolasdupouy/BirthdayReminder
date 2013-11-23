@@ -5,7 +5,6 @@ import com.example.birthdayreminder.R;
 
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 /**

@@ -2,9 +2,6 @@ package com.nicolasdupouy.birthdayreminder.model;
 
 import java.util.Date;
 
-import android.content.Context;
-import android.widget.Toast;
-
 public class EntryItem {
 
 	private String firstName;
@@ -13,7 +10,7 @@ public class EntryItem {
 	private String phoneNumber;
 	private String email;
 	
-	private boolean activated;
+	//private boolean activated;
 
 	public EntryItem(String firstName, String lastName, Date birthdayDate,
 			String phoneNumber, String email, boolean activated) {
@@ -23,7 +20,7 @@ public class EntryItem {
 		this.birthdayDate = birthdayDate;
 		this.phoneNumber = phoneNumber;
 		this.email = email;
-		this.activated = activated;
+		//this.activated = activated;
 	}
 
 	public String getFirstName() {

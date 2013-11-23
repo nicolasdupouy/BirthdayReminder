@@ -1,6 +1,6 @@
 package com.nicolasdupouy.birthdayreminder.adapter;
 
-import java.text.SimpleDateFormat;
+import java.text.DateFormat;
 import java.util.List;
 
 import com.nicolasdupouy.birthdayreminder.model.EntryItem;
@@ -16,7 +16,7 @@ import android.widget.Toast;
 public class EntryPresentationAdapter extends ArrayAdapter<EntryItem> {
 
 	//private static final String dateFormatPattern = "yyyy-MM-dd HH:mm:ss Z";
-	private static final String dateFormatPattern = "dd/MM/yyyy";
+	//private static final String dateFormatPattern = "dd/MM/yyyy";
 	
 	private Context birthdayReminderMainActivityContext = null;
 	private LayoutInflater layoutInflater = null;
@@ -99,8 +99,10 @@ public class EntryPresentationAdapter extends ArrayAdapter<EntryItem> {
 	}
 	
 	private String getBirthdayDate(EntryItem entryItem) {
-		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(dateFormatPattern);
-		return simpleDateFormat.format(entryItem.getBirthdayDate());
+		DateFormat dateFormat = DateFormat.getDateInstance();
+		//SimpleDateFormat simpleDateFormat = new SimpleDateFormat(dateFormatPattern);
+		//return simpleDateFormat.format(entryItem.getBirthdayDate());
+		return dateFormat.format(entryItem.getBirthdayDate());
 		
 	}
 	

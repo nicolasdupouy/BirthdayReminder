@@ -9,20 +9,15 @@ import com.nicolasdupouy.birthdayreminder.dao.impl.EntryItemDataSourceImpl;
 import com.nicolasdupouy.birthdayreminder.model.EntryItem;
 
 import android.os.Bundle;
-import android.view.ContextMenu;
-import android.view.ContextMenu.ContextMenuInfo;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 import android.app.ListActivity;
 
 public class BirthdayReminderMainActivity extends ListActivity {
 
-	private TextView selection = null;
+	//private TextView selection = null;
 	
 	private ListView listView = null;
 	private EntryPresentationAdapter entryPresentationAdapter = null;
@@ -35,7 +30,7 @@ public class BirthdayReminderMainActivity extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.birthday_reminder_main_activity);
         
-        selection = (TextView)findViewById(R.id.selection);
+        //selection = (TextView)findViewById(R.id.selection);
         
         listView = (ListView) getListView();
         entryItemsList = entryItemDataSource.findAll();
@@ -64,13 +59,13 @@ public class BirthdayReminderMainActivity extends ListActivity {
     	selection.setText(getModel(position).getFirstName());
 	}*/
 
-    private void refreshDisplay() {
+   /* private void refreshDisplay() {
 		entryItemsList = entryItemDataSource.findAll();
 		/*ArrayAdapter<EntryItem> adapter =
 				new ArrayAdapter<EntryItem>(this, R.layout.list_item_layout, entryItemsList);
-		setListAdapter(adapter);*/
+		setListAdapter(adapter);* /
 		//listView.setAdapter(adapter);
-	}
+	}*/
     
     
     /* ##################

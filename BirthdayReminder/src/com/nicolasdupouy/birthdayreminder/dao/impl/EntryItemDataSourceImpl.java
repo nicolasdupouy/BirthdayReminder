@@ -4,9 +4,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import android.widget.Toast;
-
-import com.nicolasdupouy.birthdayreminder.activity.BirthdayReminderMainActivity;
 import com.nicolasdupouy.birthdayreminder.dao.EntryItemDataSource;
 import com.nicolasdupouy.birthdayreminder.model.EntryItem;
 
