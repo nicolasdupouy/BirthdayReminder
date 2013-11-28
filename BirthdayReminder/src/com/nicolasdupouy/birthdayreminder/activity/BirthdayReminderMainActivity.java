@@ -2,23 +2,24 @@ package com.nicolasdupouy.birthdayreminder.activity;
 
 import java.util.List;
 
-import com.example.birthdayreminder.R;
+import com.nicolasdupouy.birthdayreminder.R;
 import com.nicolasdupouy.birthdayreminder.adapter.EntryPresentationAdapter;
 import com.nicolasdupouy.birthdayreminder.dao.EntryItemDataSource;
 import com.nicolasdupouy.birthdayreminder.dao.impl.EntryItemDataSourceImpl;
 import com.nicolasdupouy.birthdayreminder.model.EntryItem;
+import com.nicolasdupouy.birthdayreminder.tools.BirthdayReminderConstants;
 
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.ListView;
+import android.widget.Toast;
 import android.app.ListActivity;
+import android.content.Intent;
 
 public class BirthdayReminderMainActivity extends ListActivity {
 
-	//private TextView selection = null;
-	
 	private ListView listView = null;
 	private EntryPresentationAdapter entryPresentationAdapter = null;
 	
@@ -30,27 +31,13 @@ public class BirthdayReminderMainActivity extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.birthday_reminder_main_activity);
         
-        //selection = (TextView)findViewById(R.id.selection);
-        
         listView = (ListView) getListView();
         entryItemsList = entryItemDataSource.findAll();
         entryPresentationAdapter = new EntryPresentationAdapter(this, R.layout.list_item_layout, entryItemsList);
         listView.setAdapter(entryPresentationAdapter);
         
-        //setListAdapter(entryPresentationAdapter);
         //entryPresentationAdapter.sort();
         //refreshDisplay();
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    public EntryItem getModel(int position) {
-    	return(((EntryPresentationAdapter)getListAdapter()).getItem(position));
     }
     
     /*@Override
@@ -67,6 +54,18 @@ public class BirthdayReminderMainActivity extends ListActivity {
 		//listView.setAdapter(adapter);
 	}*/
     
+    @Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+		if (requestCode == BirthdayReminderConstants.CREATE_ENTRY_INTENT_REQUEST
+				&& resultCode == RESULT_OK) {
+			EntryItem entryItem = data.getParcelableExtra(BirthdayReminderConstants.CREATE_ENTRY_INTENT_EXCHANGE);
+			Toast.makeText(this, 
+							"Entrée ajoutée: " + entryItem, 
+							Toast.LENGTH_SHORT)
+							.show();
+		}
+	}
     
     /* ##################
      * ## OPTIONS Menu ##
@@ -92,7 +91,15 @@ public class BirthdayReminderMainActivity extends ListActivity {
 		switch (item.getItemId()) {
 		case R.id.add:
 			//add();
-			entryItemDataSource.add(null);
+			//Intent/Activity/Ecran pour ajouter une entrée !
+			Intent secondActivity = new Intent(BirthdayReminderMainActivity.this, AddEntryActivity.class);
+			startActivityForResult(secondActivity, BirthdayReminderConstants.CREATE_ENTRY_INTENT_REQUEST);
+			
+			/*Bundle data = getIntent().getExtras();
+			EntryItem entryItem = (EntryItem) data.getParcelable(BirthdayReminderConstants.CREATE_ENTRY_INTENT_EXCHANGE);
+			
+			//EntryItem entryItem = secondActivity.getParcelableExtra(BirthdayReminderConstants.CREATE_ENTRY_INTENT_EXCHANGE);
+			entryItemDataSource.add(entryItem);*/
 			return true;
 
 		case R.id.reset:

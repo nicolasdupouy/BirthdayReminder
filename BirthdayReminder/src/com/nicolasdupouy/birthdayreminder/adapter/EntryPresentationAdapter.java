@@ -7,6 +7,7 @@ import com.nicolasdupouy.birthdayreminder.business.RowActionTypeEnum;
 import com.nicolasdupouy.birthdayreminder.business.RowAction;
 import com.nicolasdupouy.birthdayreminder.business.impl.RowActionImpl;
 import com.nicolasdupouy.birthdayreminder.model.EntryItem;
+import com.nicolasdupouy.birthdayreminder.tools.Util;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -66,8 +67,9 @@ public class EntryPresentationAdapter extends ArrayAdapter<EntryItem> {
 	}
 
 	private String getBirthdayDate(EntryItem entryItem) {
-		DateFormat dateFormat = DateFormat.getDateInstance();
-		return dateFormat.format(entryItem.getBirthdayDate());
+		/*DateFormat dateFormat = DateFormat.getDateInstance();
+		return dateFormat.format(entryItem.getBirthdayDate());*/
+		return Util.dateToString(entryItem.getBirthdayDate());
 
 	}
 
