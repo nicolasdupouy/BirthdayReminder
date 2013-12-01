@@ -35,19 +35,12 @@
         android:hint="@string/lastName" />
 	
 	<!-- ## birthdayDate -->
-	<TextView
-        android:layout_width="fill_parent"
+	<Button
+	    android:id="@+id/birthdayDateButton"
+	    android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:textColor="#FF0000"
-        android:gravity="center"
-        android:text="@string/birthdayDate_" />
-	<EditText
-        android:id="@+id/birthdayDate"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:inputType="date"
-        android:hint="@string/birthdayDate" />
+        android:onClick="chooseBirthdayDate"
+        android:text="@string/enterDate" />
 	
 	<!-- ## phoneNumber -->
 	<TextView

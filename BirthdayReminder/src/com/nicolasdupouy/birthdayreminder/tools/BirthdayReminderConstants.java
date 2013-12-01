@@ -4,6 +4,9 @@ public final class BirthdayReminderConstants {
 
 	private BirthdayReminderConstants() {}
 	
+	public static final String EMPTY_STRING = "";
+	public static final String LINE_BREAK = "\n";
+	
 	public static final String ENTRIES_STORAGE_FILENAME = "Entries.storage";
 	
 	public static final String LOG_TAG_PARSE_DATE = "LOG_TAG_PARSE_DATE";

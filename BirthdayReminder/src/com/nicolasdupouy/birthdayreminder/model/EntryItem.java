@@ -18,17 +18,14 @@ public class EntryItem implements Parcelable {
 	public static class Builder {
 		private final String firstName;
 		private final String lastName;
-		private Date birthdayDate = null;
+		private final Date birthdayDate;
 		private String phoneNumber = null;
 		private String email = null;
 		
-		public Builder(String firstName, String lastName) {
+		public Builder(String firstName, String lastName, Date birthdayDate) {
 			this.firstName = firstName;
 			this.lastName = lastName;
-		}
-		public Builder birthdayDate(Date birthdayDate) {
 			this.birthdayDate = birthdayDate;
-			return this;
 		}
 		public Builder phoneNumber(String phoneNumber) {
 			this.phoneNumber = phoneNumber;
@@ -50,12 +47,8 @@ public class EntryItem implements Parcelable {
 		this.phoneNumber = builder.phoneNumber;
 		this.email = builder.email;
 	}
-	/*public EntryItem(String firstName, String lastName) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-	}*/
-
-	public EntryItem(String firstName, String lastName, Date birthdayDate,
+	
+	/*public EntryItem(String firstName, String lastName, Date birthdayDate,
 			String phoneNumber, String email, boolean activated) {
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -63,19 +56,19 @@ public class EntryItem implements Parcelable {
 		this.phoneNumber = phoneNumber;
 		this.email = email;
 		//this.activated = activated;
-	}
+	}*/
 
 	@Override
 	public String toString() {
-		/*return "EntryItem [firstName=" + firstName + ", lastName=" + lastName
+		return "EntryItem [firstName=" + firstName + ", lastName=" + lastName
 				+ ", birthdayDate=" + birthdayDate + ", phoneNumber="
-				+ phoneNumber + ", email=" + email + ", activated=" + activated
-				+ "]";*/
-		return firstName + " " 
+				+ phoneNumber + ", email=" + email /*+ ", activated=" + activated*/
+				+ "]";
+		/*return firstName + " " 
 				+ lastName + " " 
 				+ birthdayDate + " "
 				+  phoneNumber + " "
-				+  email;
+				+  email;*/
 	}
 
 	/* 
@@ -93,7 +86,9 @@ public class EntryItem implements Parcelable {
 	public void writeToParcel(Parcel dest, int flags) {
 		dest.writeString(firstName);
 		dest.writeString(lastName);
-		dest.writeLong(birthdayDate.getTime());
+		//if (birthdayDate != null) {
+			dest.writeLong(birthdayDate.getTime());
+		//}
 		dest.writeString(phoneNumber);
 		dest.writeString(email);
 	}
@@ -141,10 +136,6 @@ public class EntryItem implements Parcelable {
 	public Date getBirthdayDate() {
 		return birthdayDate;
 	}
-
-	/*public void setBirthdayDate(String birthdayDateText) {
-
-	}*/
 
 	public String getPhoneNumber() {
 		return phoneNumber;

@@ -1,11 +1,11 @@
-package com.nicolasdupouy.birthdayreminder.activity;
+package com.nicolasdupouy.birthdayreminder.screen;
 
 import java.util.List;
 
 import com.nicolasdupouy.birthdayreminder.R;
 import com.nicolasdupouy.birthdayreminder.adapter.EntryPresentationAdapter;
-import com.nicolasdupouy.birthdayreminder.dao.EntryItemDataSource;
-import com.nicolasdupouy.birthdayreminder.dao.impl.EntryItemDataSourceImpl;
+import com.nicolasdupouy.birthdayreminder.dao.EntryItemDataSourceActivity;
+import com.nicolasdupouy.birthdayreminder.dao.impl.EntryItemDataSourceActivityImpl;
 import com.nicolasdupouy.birthdayreminder.model.EntryItem;
 import com.nicolasdupouy.birthdayreminder.tools.BirthdayReminderConstants;
 
@@ -24,7 +24,7 @@ public class BirthdayReminderMainActivity extends ListActivity {
 	private EntryPresentationAdapter entryPresentationAdapter = null;
 	
 	private List<EntryItem> entryItemsList = null;
-	private EntryItemDataSource entryItemDataSource = new EntryItemDataSourceImpl();
+	private EntryItemDataSourceActivity entryItemDataSource = new EntryItemDataSourceActivityImpl();
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,10 +60,12 @@ public class BirthdayReminderMainActivity extends ListActivity {
 		if (requestCode == BirthdayReminderConstants.CREATE_ENTRY_INTENT_REQUEST
 				&& resultCode == RESULT_OK) {
 			EntryItem entryItem = data.getParcelableExtra(BirthdayReminderConstants.CREATE_ENTRY_INTENT_EXCHANGE);
-			Toast.makeText(this, 
+			/*Toast.makeText(this, 
 							"Entrée ajoutée: " + entryItem, 
 							Toast.LENGTH_SHORT)
-							.show();
+							.show();*/
+			
+			entryItemDataSource.add(entryItem);
 		}
 	}
     
