@@ -5,7 +5,7 @@ import android.widget.Toast;
 
 import com.ndu.birthdayreminder.business.RowActionTypeEnum;
 import com.ndu.birthdayreminder.business.RowAction;
-import com.nicolasdupouy.birthdayreminder.model.EntryItem;
+import com.ndu.birthdayreminder.model.EntryItem;
 
 public class RowActionImpl implements RowAction {
 

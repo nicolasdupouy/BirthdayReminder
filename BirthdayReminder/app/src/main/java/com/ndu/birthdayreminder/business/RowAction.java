@@ -1,6 +1,6 @@
 package com.ndu.birthdayreminder.business;
 
-import com.nicolasdupouy.birthdayreminder.model.EntryItem;
+import com.ndu.birthdayreminder.model.EntryItem;
 
 public interface RowAction {
 

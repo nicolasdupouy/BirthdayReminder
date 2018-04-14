@@ -1,6 +1,6 @@
 package com.ndu.birthdayreminder.adapter;
 
-import com.nicolasdupouy.birthdayreminder.R;
+import com.ndu.birthdayreminder.R;
 
 import android.view.View;
 import android.widget.ImageButton;

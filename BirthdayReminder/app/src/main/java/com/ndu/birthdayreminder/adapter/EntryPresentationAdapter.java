@@ -6,8 +6,8 @@ import java.util.List;
 import com.ndu.birthdayreminder.business.RowActionTypeEnum;
 import com.ndu.birthdayreminder.business.RowAction;
 import com.ndu.birthdayreminder.business.impl.RowActionImpl;
-import com.nicolasdupouy.birthdayreminder.model.EntryItem;
-import com.nicolasdupouy.birthdayreminder.tools.Util;
+import com.ndu.birthdayreminder.model.EntryItem;
+import com.ndu.birthdayreminder.tools.Util;
 
 import android.content.Context;
 import android.view.LayoutInflater;

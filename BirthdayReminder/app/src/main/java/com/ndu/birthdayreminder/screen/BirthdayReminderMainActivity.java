@@ -2,12 +2,12 @@ package com.ndu.birthdayreminder.screen;
 
 import java.util.List;
 
-import com.nicolasdupouy.birthdayreminder.R;
+import com.ndu.birthdayreminder.R;
 import com.ndu.birthdayreminder.adapter.EntryPresentationAdapter;
-import com.nicolasdupouy.birthdayreminder.dao.EntryItemDataSourceActivity;
-import com.nicolasdupouy.birthdayreminder.dao.impl.EntryItemDataSourceActivityImpl;
-import com.nicolasdupouy.birthdayreminder.model.EntryItem;
-import com.nicolasdupouy.birthdayreminder.tools.BirthdayReminderConstants;
+import com.ndu.birthdayreminder.dao.EntryItemDataSourceActivity;
+import com.ndu.birthdayreminder.dao.impl.EntryItemDataSourceActivityImpl;
+import com.ndu.birthdayreminder.model.EntryItem;
+import com.ndu.birthdayreminder.tools.BirthdayReminderConstants;
 
 import android.os.Bundle;
 import android.view.Menu;

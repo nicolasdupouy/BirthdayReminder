@@ -2,10 +2,10 @@ package com.ndu.birthdayreminder.screen;
 
 import java.util.Calendar;
 
-import com.nicolasdupouy.birthdayreminder.R;
-import com.nicolasdupouy.birthdayreminder.model.EntryItem;
-import com.nicolasdupouy.birthdayreminder.tools.BirthdayReminderConstants;
-import com.nicolasdupouy.birthdayreminder.tools.Util;
+import com.ndu.birthdayreminder.R;
+import com.ndu.birthdayreminder.model.EntryItem;
+import com.ndu.birthdayreminder.tools.BirthdayReminderConstants;
+import com.ndu.birthdayreminder.tools.Util;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;
