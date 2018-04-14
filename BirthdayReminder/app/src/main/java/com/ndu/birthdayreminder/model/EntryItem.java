@@ -1,4 +1,4 @@
-package com.nicolasdupouy.birthdayreminder.model;
+package com.ndu.birthdayreminder.model;
 
 import java.util.Date;
 

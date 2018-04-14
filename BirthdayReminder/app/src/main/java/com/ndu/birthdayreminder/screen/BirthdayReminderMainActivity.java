@@ -1,9 +1,9 @@
-package com.nicolasdupouy.birthdayreminder.screen;
+package com.ndu.birthdayreminder.screen;
 
 import java.util.List;
 
 import com.nicolasdupouy.birthdayreminder.R;
-import com.nicolasdupouy.birthdayreminder.adapter.EntryPresentationAdapter;
+import com.ndu.birthdayreminder.adapter.EntryPresentationAdapter;
 import com.nicolasdupouy.birthdayreminder.dao.EntryItemDataSourceActivity;
 import com.nicolasdupouy.birthdayreminder.dao.impl.EntryItemDataSourceActivityImpl;
 import com.nicolasdupouy.birthdayreminder.model.EntryItem;
@@ -61,7 +61,7 @@ public class BirthdayReminderMainActivity extends ListActivity {
 				&& resultCode == RESULT_OK) {
 			EntryItem entryItem = data.getParcelableExtra(BirthdayReminderConstants.CREATE_ENTRY_INTENT_EXCHANGE);
 			/*Toast.makeText(this, 
-							"Entrée ajoutée: " + entryItem, 
+							"Entrï¿½e ajoutï¿½e: " + entryItem, 
 							Toast.LENGTH_SHORT)
 							.show();*/
 			
@@ -93,7 +93,7 @@ public class BirthdayReminderMainActivity extends ListActivity {
 		switch (item.getItemId()) {
 		case R.id.add:
 			//add();
-			//Intent/Activity/Ecran pour ajouter une entrée !
+			//Intent/Activity/Ecran pour ajouter une entrï¿½e !
 			Intent secondActivity = new Intent(BirthdayReminderMainActivity.this, AddEntryActivity.class);
 			startActivityForResult(secondActivity, BirthdayReminderConstants.CREATE_ENTRY_INTENT_REQUEST);
 			

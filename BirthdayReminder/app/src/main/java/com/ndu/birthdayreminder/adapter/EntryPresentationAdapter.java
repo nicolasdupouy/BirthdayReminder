@@ -1,11 +1,11 @@
-package com.nicolasdupouy.birthdayreminder.adapter;
+package com.ndu.birthdayreminder.adapter;
 
 import java.text.DateFormat;
 import java.util.List;
 
-import com.nicolasdupouy.birthdayreminder.business.RowActionTypeEnum;
-import com.nicolasdupouy.birthdayreminder.business.RowAction;
-import com.nicolasdupouy.birthdayreminder.business.impl.RowActionImpl;
+import com.ndu.birthdayreminder.business.RowActionTypeEnum;
+import com.ndu.birthdayreminder.business.RowAction;
+import com.ndu.birthdayreminder.business.impl.RowActionImpl;
 import com.nicolasdupouy.birthdayreminder.model.EntryItem;
 import com.nicolasdupouy.birthdayreminder.tools.Util;
 

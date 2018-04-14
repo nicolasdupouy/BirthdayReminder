@@ -1,10 +1,10 @@
-package com.nicolasdupouy.birthdayreminder.business.impl;
+package com.ndu.birthdayreminder.business.impl;
 
 import android.content.Context;
 import android.widget.Toast;
 
-import com.nicolasdupouy.birthdayreminder.business.RowActionTypeEnum;
-import com.nicolasdupouy.birthdayreminder.business.RowAction;
+import com.ndu.birthdayreminder.business.RowActionTypeEnum;
+import com.ndu.birthdayreminder.business.RowAction;
 import com.nicolasdupouy.birthdayreminder.model.EntryItem;
 
 public class RowActionImpl implements RowAction {

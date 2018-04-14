@@ -1,4 +1,4 @@
-package com.nicolasdupouy.birthdayreminder.dao.impl;
+package com.ndu.birthdayreminder.dao.impl;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -12,9 +12,9 @@ import android.app.Activity;
 import android.provider.SyncStateContract.Constants;
 import android.widget.Toast;
 
-import com.nicolasdupouy.birthdayreminder.dao.EntryItemDataSourceActivity;
-import com.nicolasdupouy.birthdayreminder.model.EntryItem;
-import com.nicolasdupouy.birthdayreminder.tools.BirthdayReminderConstants;
+import com.ndu.birthdayreminder.dao.EntryItemDataSourceActivity;
+import com.ndu.birthdayreminder.model.EntryItem;
+import com.ndu.birthdayreminder.tools.BirthdayReminderConstants;
 
 public class EntryItemDataSourceActivityImpl extends Activity implements EntryItemDataSourceActivity {
 
@@ -26,7 +26,7 @@ public class EntryItemDataSourceActivityImpl extends Activity implements EntryIt
 	}
 	@Override
 	public boolean add(EntryItem entryItem) {
-		/*Toast.makeText(EntryItemDataSourceActivityImpl.this, "Vous voulez ajouter une entrée ! : " + entryItem, Toast.LENGTH_SHORT)
+		/*Toast.makeText(EntryItemDataSourceActivityImpl.this, "Vous voulez ajouter une entrï¿½e ! : " + entryItem, Toast.LENGTH_SHORT)
 		 .show();*/
 		entriesItemList.add(entryItem);
 		return false;

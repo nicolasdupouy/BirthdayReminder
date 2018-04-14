@@ -1,4 +1,4 @@
-package com.nicolasdupouy.birthdayreminder.screen;
+package com.ndu.birthdayreminder.screen;
 
 import java.util.Calendar;
 

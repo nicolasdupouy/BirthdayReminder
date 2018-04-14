@@ -1,8 +1,8 @@
-package com.nicolasdupouy.birthdayreminder.dao;
+package com.ndu.birthdayreminder.dao;
 
 import java.util.List;
 
-import com.nicolasdupouy.birthdayreminder.model.EntryItem;
+import com.ndu.birthdayreminder.model.EntryItem;
 
 public interface EntryItemDataSourceActivity {
 

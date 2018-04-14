@@ -1,4 +1,4 @@
-package com.nicolasdupouy.birthdayreminder.business;
+package com.ndu.birthdayreminder.business;
 
 public enum RowActionTypeEnum {
 	CHANGE_PHOTO,

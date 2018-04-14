@@ -1,4 +1,4 @@
-package com.nicolasdupouy.birthdayreminder.tools;
+package com.ndu.birthdayreminder.tools;
 
 public final class BirthdayReminderConstants {
 

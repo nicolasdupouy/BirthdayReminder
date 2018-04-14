@@ -1,4 +1,4 @@
-package com.nicolasdupouy.birthdayreminder.tools;
+package com.ndu.birthdayreminder.tools;
 
 import java.text.DateFormat;
 import java.util.Date;

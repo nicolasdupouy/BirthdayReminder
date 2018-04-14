@@ -1,4 +1,4 @@
-package com.nicolasdupouy.birthdayreminder.adapter;
+package com.ndu.birthdayreminder.adapter;
 
 import com.nicolasdupouy.birthdayreminder.R;
 
