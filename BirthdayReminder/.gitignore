@@ -1,0 +1,13 @@
+# Android temp directories
+gen/
+libs/
+build/
+
+# Gradle
+.gradle/
+
+
+# Android Studio
+*.iml
+.idea/
+local.properties
