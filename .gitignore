@@ -1,8 +1,0 @@
-# Android temp directories
-bin/
-gen/
-libs/
-
-# Eclipse temp
-.settings/
-.metadata/
